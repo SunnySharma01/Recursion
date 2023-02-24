@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+  public static void main(String[] args){
+    Scanner scn = new Scanner(System.in);
+	int n = scn.nextInt();
+    printDI(n);
+  }
+
+  public static void printDI(int n) {
+    // your code here
+	    	// 1. parameters of our recursive function -> N
+		// 2. return type of our recursive function -> void (print required answer inside the function itself)
+		// 3. base case of our recursive function -> Final Valid Input or First Invalid Input => N=0 => stop the recursion
+		// 4. next recursion call -> printDI(N-1)
+		if(n==0){
+			return;
+		}
+		System.out.println(n);
+		printDI(n-1);
+	    System.out.println(n);
+  }
+}
