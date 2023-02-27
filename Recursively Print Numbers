@@ -1,0 +1,28 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        
+		printtillN(N, 1);
+        
+    }
+
+	public static void printtillN(int N, int i) {
+		// 1. parameters of our recursive function -> N, i
+		// 2. return type of our recursive function -> void (print required answer inside the function itself)
+		// 3. base case of our recursive function -> Final Valid Input or First Invalid Input => i>N => stop the recursion
+		// 4. next recursion call -> printtillN(N,i+1)
+
+		// base case
+		if(i>N){
+			//stop the recursion
+			return;
+		}
+		System.out.print(i+" ");
+		
+		//next recursion call
+		printtillN(N,i+1);
+    }
+}
