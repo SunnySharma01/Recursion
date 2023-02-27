@@ -1,0 +1,32 @@
+import java.io.*;
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+       int X,N;
+        X = sc.nextInt();        
+        N = sc.nextInt();
+
+        System.out.println(power(X,N));		
+    }
+
+	public static long power(long x, long n)
+    {
+		if(n==0){
+			return 1;
+		}
+		if(n==1){
+			return x;
+		}
+		if(n%2==0){
+			// n is even
+			return power(x*x,n/2);
+		}
+		else{
+			// n is odd
+			return x*power(x*x,n/2);
+		}
+    }
+}
