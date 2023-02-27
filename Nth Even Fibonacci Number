@@ -1,0 +1,19 @@
+import java.util.*;
+import static java.lang.Math.ceil;
+ 
+public class Main {
+	static long mod = 1000000007; 
+	static long NthEvenFibonacci(int n,long fibo[]) {
+        if(n==1 || n==0)
+			return n;
+		if(fibo[n]!=0) return fibo[n];
+		return fibo[n] = NthEvenFibonacci(n-2,fibo)+NthEvenFibonacci(n-1,fibo);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+		long fibo[] =new long[100];
+        System.out.println(NthEvenFibonacci(n*3,fibo)%mod);
+    }
+	
+}
